@@ -1,0 +1,411 @@
+/* BASIC RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Block quote */
+
+
+/* center the blockquote in the page */
+
+.zone1 {
+    display: flex;
+    justify-content: center;
+    margin-top: -250px;
+    margin-left: -150px;
+    /* height: 100vh;
+    padding: 0 20px; */
+}
+
+
+/* Blockquote main style */
+
+.blockquote {
+    position: relative;
+    font-family: 'Barlow Condensed', sans-serif;
+    max-width: 620px;
+    /* margin: 80px auto; */
+    align-self: center;
+}
+
+
+/* Blockquote header */
+
+.blockquote h1 {
+    font-family: 'Abril Fatface', cursive;
+    position: relative;
+    /* for pseudos */
+    color: #e74848;
+    font-size: 2.8rem;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    border: 5px solid #fff;
+    border: solid 2px;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+
+/* Blockquote right double quotes */
+
+.blockquote h1:after {
+    content: "";
+    position: absolute;
+    border: 2px solid #e74848;
+    border-radius: 0 50px 0 0;
+    width: 60px;
+    height: 60px;
+    bottom: -62px;
+    left: 50px;
+    border-bottom: none;
+    border-left: none;
+    z-index: 3;
+}
+
+.blockquote h1:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    border: 6px solid black;
+    bottom: -3px;
+    left: 50px;
+    z-index: 2;
+}
+
+
+/* increase header size after 600px */
+
+@media all and (min-width: 600px) {
+    .blockquote h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+}
+
+
+/* Blockquote subheader */
+
+.blockquote h4 {
+    position: relative;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 1;
+    margin-left: 150px;
+    padding-left: 12px;
+}
+
+.blockquote h4:first-letter {
+    margin-left: -12px;
+}
+
+
+/* Block quote end */
+
+
+/* HTML ELEMENTS */
+
+body {
+    padding-top: 25%;
+    background-image: url(./img/bg.jpg);
+    background-size: cover;
+}
+
+h1,
+h2 {
+    font: bold 50px Helvetica, Arial, Sans-serif;
+    text-align: center;
+    color: #eee;
+    text-shadow: 0px 2px 6px #333;
+}
+
+h1 small {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 14px;
+    display: block;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+h2 a {
+    display: block;
+    text-decoration: none;
+    margin: 0 0 30px 0;
+    fsont: italic 40px Georgia, Times, Serif;
+    text-align: center;
+    color: #bfe1f1;
+    text-shadow: 0px 2px 6px #333;
+}
+
+h2 a:hover {
+    color: #90bcd0;
+}
+
+
+/* COMMON CLASSES */
+
+.break {
+    clear: both;
+}
+
+
+/* WRAPPER */
+
+#wrapper {
+    /* width: 800px; */
+    /* margin: 40px auto; */
+    display: flex;
+    flex-direction: column;
+}
+
+.zone2 {
+    display: flex;
+    padding-top: 5%;
+    /* justify-content: space-around; */
+}
+
+#title {
+    margin-left: 0px;
+    padding: 5% 10% 10% 10%;
+}
+
+
+/* CONTENT */
+
+#content {}
+
+#content h2 {
+    font: bold 30px Helvetica, Arial, Sans-serif;
+    color: #eee;
+    text-shadow: 0px 2px 6px #333;
+    /* margin-left: 400px; */
+    /* padding-top: 20px; */
+}
+
+
+/* BAR CHART */
+
+#bar {
+    list-style: none;
+}
+
+#bar li {}
+
+
+/* Last bottom should have a shadow */
+
+#bar li div.bottom {
+    -moz-box-shadow: 0 10px 10px hsla(0, 0%, 0%, .2);
+    -webkit-box-shadow: 0 10px 30px hsla(0, 0%, 0%, .2);
+    box-shadow: 0 10px 30px hsla(0, 0%, 0%, .2);
+}
+
+
+/* Ellipse top */
+
+#bar li div.top {
+    background-color: rgba(213, 238, 241, 0.5);
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    /* Starting size if row plate */
+    width: 40px;
+    height: 100px;
+    -moz-border-radius: 40px/100px;
+    -webkit-border-radius: 40px 100px;
+    border-radius: 40px/100px;
+    -webkit-transition-property: margin-left;
+    -webkit-transition-duration: 500ms;
+}
+
+
+/* Bar bottom */
+
+#bar li div.bottom {
+    position: relative;
+    margin: 5px 0;
+    width: 50px;
+    height: 100px;
+    -moz-border-radius: 40px/100px;
+    -webkit-border-radius: 40px 100px;
+    border-radius: 40px/100px;
+    background: -moz-linear-gradient(-90deg, #97a7a9, #b8cbcd);
+    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#97a7a9), to(#b8cbcd));
+    -webkit-transition-property: width;
+    -webkit-transition-duration: 500ms;
+}
+
+#bar li div.bottom div.infobox {
+    padding: 40px 0 0 600px;
+    -webkit-transition-property: color;
+    -webkit-transition-duration: 500ms;
+}
+
+#bar li div.bottom div.infobox h3 {
+    font-family: Georgia, serif, Times;
+    color: white;
+}
+
+#bar li div.bottom div.infobox p {
+    font-family: "Lucida Grande", Arial, Helvetica, Sans-Serif;
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 500ms;
+}
+
+
+/* General hover actions */
+
+#bar li:hover div.bottom div.infobox {
+    color: #eee;
+    text-shadow: 0px 3px 3px grey;
+}
+
+#bar li:hover div.bottom div.infobox p {
+    opacity: 1;
+}
+
+
+/* For bar 
+100% for top is 500px
+Adjust bottom accordingly
+*/
+
+
+/* Scientists bar */
+
+#scientists div.top {
+    z-index: 99;
+}
+
+#scientists div.bottom {
+    z-index: 98;
+    height: 150px;
+}
+
+#scientists:hover div.top {
+    z-index: 999;
+    background-color: #1f81ac;
+    margin-left: 100px;
+}
+
+#scientists:hover div.bottom {
+    z-index: 998;
+    background-color: #1a6c90;
+    width: 140px;
+    background: -moz-linear-gradient(-90deg, #1a6c90, #14506b);
+    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#1a6c90), to(#14506b));
+}
+
+
+/* Postdocs bar */
+
+#postdocs div.top {
+    z-index: 97;
+}
+
+#postdocs div.bottom {
+    z-index: 96;
+    height: 200px;
+}
+
+#postdocs:hover div.top {
+    z-index: 997;
+    background-color: #bc003c;
+    margin-left: 400px;
+}
+
+#postdocs:hover div.bottom {
+    z-index: 996;
+    background-color: #9d0032;
+    width: 440px;
+    background: -moz-linear-gradient(-90deg, #9d0032, #7a0027);
+    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#9d0032), to(#7a0027));
+}
+
+
+/* phd bar */
+
+#phd div.top {
+    z-index: 95;
+}
+
+#phd div.bottom {
+    z-index: 94;
+    height: 250px;
+}
+
+#phd:hover div.top {
+    z-index: 995;
+    background-color: #d98f23;
+    margin-left: 62.5px;
+}
+
+#phd:hover div.bottom {
+    z-index: 994;
+    background-color: #b6781e;
+    width: 100px;
+    background: -moz-linear-gradient(-90deg, #b6781e, #916018);
+    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#b6781e), to(#916018));
+}
+
+
+/* undergrad bar */
+
+#undergrad div.top {
+    z-index: 93;
+}
+
+#undergrad div.bottom {
+    z-index: 92;
+    height: 100px;
+}
+
+#undergrad:hover div.top {
+    z-index: 993;
+    background-color: #7da864;
+    margin-left: 333px;
+}
+
+#undergrad:hover div.bottom {
+    z-index: 992;
+    background-color: #698d54;
+    width: 370px;
+    background: -moz-linear-gradient(-90deg, #698d54, #506b40);
+    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#698d54), to(#506b40));
+}
+
+
+/* others bar */
+
+#others div.top {
+    z-index: 91;
+}
+
+#others div.bottom {
+    z-index: 90;
+    height: 120px;
+}
+
+#others:hover div.top {
+    z-index: 991;
+    background-color: #3f1150;
+    margin-left: 429px;
+}
+
+#others:hover div.bottom {
+    z-index: 990;
+    background-color: #340e43;
+    width: 460px;
+    background: -moz-linear-gradient(-90deg, #340e43, #1a0721);
+    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#340e43), to(#1a0721));
+}
